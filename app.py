@@ -5,11 +5,13 @@ import pickle
 import numpy as np
 import sklearn
 from sklearn.preprocessing import StandardScaler
-from sklearn.externals import joblib
+import joblib
+
 app = Flask(__name__)
-# model = pickle.load(open('rf.pkl', 'rb'))
+# cdsmodel = pickle.load(open('rf.pkl', 'rb'))
 model = joblib.load('rf.pkl')
 @app.route('/',methods=['GET'])
+
 def Home():
     return render_template('index.html')
 
