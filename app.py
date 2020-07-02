@@ -9,7 +9,7 @@ import joblib
 
 app = Flask(__name__)
 # cdsmodel = pickle.load(open('rf.pkl', 'rb'))
-model = joblib.load('rf.pkl')
+model = joblib.load('rf1.pkl')
 @app.route('/',methods=['GET'])
 
 def Home():
